@@ -59,13 +59,13 @@ print(f"Coordinates of the closest Pret to that point: {closest_pret[1]}N {close
 plt.figure(figsize=(10, 5))
 
 # Pret locations
-plt.scatter([p[0] for p in points], [p[1] for p in points], c='red', marker='o', s=50, label='Points')
+plt.scatter([p[0] for p in points], [p[1] for p in points], c='red', marker='o', s=50, label='Pret A Manger Locations')
 
 # Farthest point from all Prets
-plt.plot(m_max_distance_point[0], m_max_distance_point[1], "go")
+plt.plot(m_max_distance_point[0], m_max_distance_point[1], "go", label="Point farthest from all Prets")
 
 # Inner London border
-plt.plot(*london.exterior.xy, c="blue")
+plt.plot(*london.exterior.xy, c="blue", label="Inner London border")
 
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
